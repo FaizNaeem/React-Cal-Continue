@@ -2,26 +2,27 @@
 import './App.css';
 
 function App() {
-  const Cal =(valu)=>{
-    let get_val = document.getElementById("hello").value += valu
-    console.log(get_val);
-}
-// end 
-// result 
-const Result =()=>{
-  let x =  document.getElementById("hello").value
-  let b = eval(x)
-  document.getElementById("hello").value= b
-}
-// end 
-// clear 
-const Clear =()=>{
-document.getElementById("he").value=''
-}
-const Del=()=>{
-    let dlt = document.getElementById("he").value
-    document.getElementById("he").value=dlt.slice(0,-1)
-}
+  function Cal (val){
+    document.getElementById('input').value += val
+    return val
+  // console.log('hi')
+     }
+     function Result () {
+      let x = document.getElementById('input').value
+      let y = eval(x)
+      document.getElementById('input').value = y
+      // console.log('input')
+      return y 
+     }
+      function Clear (){
+       document.getElementById('input').value = ""
+      
+      }
+     const Del=()=>{ 
+      let Del = document.getElementById('input').value
+      
+      document.getElementById('input').value = Del.slice(0,-1)
+     }
   return (
     <div className="App">
  <div class="container">
@@ -29,7 +30,7 @@ const Del=()=>{
             <button id="togle"><i className="fa-solid fa-toggle-off"></i></button>
         </div> */}
         <div className="second-container">
-            <input type="text" id="hello" className="input" placeholder="0" name="display" />
+            <input type="text" id="input" className="input" placeholder="0" name="display" />
            <div className="mar">
             <div className="cen">
              <button className="button" id="h" onClick={Cal('7')}>7</button>
