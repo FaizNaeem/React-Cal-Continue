@@ -1,29 +1,14 @@
 // import logo from './logo.svg';
+import React,{useState} from 'react';
 import './App.css';
 
 function App() {
-  function Cal (val){
-    document.getElementById('input').value += val
-    return val
-  // console.log('hi')
-     }
-     function Result () {
-      let x = document.getElementById('input').value
-      let y = eval(x)
-      document.getElementById('input').value = y
-      // console.log('input')
-      return y 
-     }
-      function Clear (){
-       document.getElementById('input').value = ""
-      
-      }
-     const Del=()=>{ 
-      let Del = document.getElementById('input').value
-      
-      document.getElementById('input').value = Del.slice(0,-1)
-     }
-  return (
+  let [inti ,setinit]= useState("")
+  function push(e){
+    setinit(inti.concat(e.target.value))
+
+  }
+    return (
     <div className="App">
  <div class="container">
         {/* <div id="change">
