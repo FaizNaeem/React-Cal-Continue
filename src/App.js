@@ -4,9 +4,17 @@ import './App.css';
 
 function App() {
   let [inti ,setinit]= useState("")
-  function push(e){
+  function Cal(e){
     setinit(inti.concat(e.target.value))
-
+  }
+  function Clear(){
+    setinit("")
+  }
+  function Result(){
+    setinit(eval(inti).toString)
+  }
+  function Del(){
+    setinit(inti.slice(0,-1))
   }
     return (
     <div className="App">
