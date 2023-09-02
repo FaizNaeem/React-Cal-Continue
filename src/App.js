@@ -18,7 +18,6 @@ function App() {
     return (
     <div className="App">
  <div class="container">
-       
         <div className="second-container">
             <input type="text" id="input" value={get} className="input" placeholder="0" name="display" />
            <div className="mar">
