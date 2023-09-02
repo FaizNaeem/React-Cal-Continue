@@ -19,9 +19,7 @@ function App() {
     return (
     <div className="App">
  <div class="container">
-        {/* <div id="change">
-            <button id="togle"><i className="fa-solid fa-toggle-off"></i></button>
-        </div> */}
+       
         <div className="second-container">
             <input type="text" id="input" value={get} className="input" placeholder="0" name="display" />
            <div className="mar">
