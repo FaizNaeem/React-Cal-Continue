@@ -4,16 +4,16 @@ import './App.css';
 function App() {
   let [get ,set]= useState("")
   function Cal(e){
-    set(get+(e.target.value))
+    set(get.concat(e.target.value));
   }
   function Clear(){
-    set("")
+    set("");
   }
   function Result(){
-    set(eval(get))
+    set(eval(get));
   }
   function Del(){
-    set(get.slice(0,-1))
+    set(get.slice(0,-1).toString)
   }
     return (
     <div className="App">
