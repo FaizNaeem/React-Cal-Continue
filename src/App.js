@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   let [get ,set]= useState("")
   function Cal(e){
-    set(get.concat(e.target.value));
+    set(get+(e.target.value));
   }
   function Clear(){
     set("");
